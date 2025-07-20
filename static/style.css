@@ -4,62 +4,14 @@ body {
 	background: linear-gradient(
 	    rgba(0, 0, 0, 0.6),
 	    rgba(0, 0, 0, 0.6)
-	  ), 
-	  url('background.jpeg') no-repeat center center fixed;
+	  ),
+	  url('/static/background.jpeg') no-repeat center center fixed;
 	background-size: cover;
 	font-family: 'Segoe UI', sans-serif;
-	overflow: hidden;
 	color: #ffffff;
-}
-
-.container {
+	overflow: hidden;
 	height: 100vh;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	text-align: center;
-	padding: 20px;
-}
-
-img {
-	max-width: 80vw;
-	max-height: 50vh;
-	border-radius: 20px;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-#slideText {
-	margin-top: 20px;
-	font-size: 1.5rem;
-	white-space: pre-line;
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-#buttonContainer button {
-	margin: 10px;
-	padding: 10px 20px;
-	font-size: 1rem;
-	border: none;
-	border-radius: 10px;
-	background-color: #ffffff;
-	color: #000000;
-	cursor: pointer;
-	transition: transform 0.2s, background-color 0.3s;
-}
-
-#buttonContainer button:hover {
-	transform: scale(1.1);
-	background-color: #dddddd;
-}
-
-.pulse {
-	animation: pulse 1s infinite;
-	cursor: pointer;
-}
-
-@keyframes pulse {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.1); }
-	100% { transform: scale(1); }
+	align-items: center;
 }
