@@ -14,8 +14,16 @@ const slides = [
     img: "gif3.gif",
     options: ["Iya", "Iya banget"]
   },
-  { type: "message", text: "🎉  Selamat Ulang Tahun! 🎂✨\nSemoga di usia baru ini kamu makin kuat,\nmakin bijak, dan terus jadi versi terbaik dari dirimu sendiri.\nSemoga semua harapan dan rencana besarmu\nbisa segera tercapai satu per satu.\n\nJangan lupa istirahat juga,\njangan cuma kejar target terus 😁\nTetap semangat dan jangan lupa bahagia ya, Bub! 🎈", img: "gif1.gif" },
-  { type: "message", text: "🎊 Sekian dulu ucapan dari aku cewek yang ngangenin\nSemoga hari-harimu makin seru,\nhidupmu makin penuh tawa & makna,\ndan langkahmu selalu dipermudah oleh semesta. ✨\nSampai jumpa di momen spesial berikutnya 🎂\n🎈 Have a blast, Sayang! 🎈", img: "gif2.gif" }
+  {
+    type: "message",
+    text: "🎉  Selamat Ulang Tahun! 🎂✨\nSemoga di usia baru ini kamu makin kuat,\nmakin bijak, dan terus jadi versi terbaik dari dirimu sendiri.\nSemoga semua harapan dan rencana besarmu\nbisa segera tercapai satu per satu.\n\nJangan lupa istirahat juga,\njangan cuma kejar target terus 😁\nTetap semangat dan jangan lupa bahagia ya, Bub! 🎈",
+    img: "gif1.gif"
+  },
+  {
+    type: "message",
+    text: "🎊 Sekian dulu ucapan dari aku cewek yang ngangenin\nSemoga hari-harimu makin seru,\nhidupmu makin penuh tawa & makna,\ndan langkahmu selalu dipermudah oleh semesta. ✨\nSampai jumpa di momen spesial berikutnya 🎂\n🎈 Have a blast, Sayang! 🎈",
+    img: "gif2.gif"
+  }
 ];
 
 function typeSlide() {
@@ -32,17 +40,16 @@ function showSlide(i) {
   buttonContainer.innerHTML = "";
 
   const slide = slides[i];
+  slideImage.src = `static/${slide.img}`;
 
   if (slide.type === "intro") {
     slideText.innerHTML = "";
-    slideImage.src = `/static/${slide.img}`;
     slideImage.classList.add("pulse");
     slideImage.onclick = nextSlide;
   } else if (slide.type === "confirm") {
     slideText.innerHTML = slide.text;
-    slideImage.src = `/static/${slide.img}`;
     slideImage.classList.remove("pulse");
-    buttonContainer.innerHTML = "";
+    slideImage.onclick = null;
     slide.options.forEach(opt => {
       const btn = document.createElement("button");
       btn.textContent = opt;
@@ -54,12 +61,11 @@ function showSlide(i) {
     });
   } else {
     slideImage.classList.remove("pulse");
-    slideImage.src = `/static/${slide.img}`;
+    slideImage.onclick = null;
     slideText.innerHTML = "";
     typeSlide();
 
     if (i === slides.length - 1) {
-      // Last slide: only show back button
       const backBtn = document.createElement("button");
       backBtn.textContent = "Kembali";
       backBtn.onclick = () => {
@@ -68,7 +74,6 @@ function showSlide(i) {
       };
       buttonContainer.appendChild(backBtn);
     } else {
-      // Show back and next buttons
       const backBtn = document.createElement("button");
       backBtn.textContent = "Kembali";
       backBtn.onclick = () => {
