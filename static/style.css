@@ -1,61 +1,54 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  font-family: sans-serif;
   background-image: url('/a-special-day-for-you/static/background.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: sans-serif;
-  text-align: center;
   color: white;
+  min-height: 100vh;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 15vh;
-  padding-bottom: 15vh;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  gap: 30px;
+  text-align: center;
+  padding: 40px 20px;
   box-sizing: border-box;
 }
 
-#slideImage {
-  width: 90%;
-  max-width: 350px;
-  height: auto;
+img {
+  max-width: 80vw;
+  max-height: 40vh;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 #slideText {
-  font-size: 1.3rem;
-  line-height: 1.6;
+  margin-top: 20px;
+  font-size: 1.4rem;
   white-space: pre-line;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-  padding: 0 10px;
 }
 
 #buttonContainer {
+  margin-top: 20px;
   display: flex;
+  gap: 15px;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 50px;
 }
 
 #buttonContainer button {
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background-color: #ffffff;
   color: #000000;
   cursor: pointer;
@@ -63,8 +56,8 @@ body {
 }
 
 #buttonContainer button:hover {
-  transform: scale(1.05);
-  background-color: #eeeeee;
+  transform: scale(1.1);
+  background-color: #dddddd;
 }
 
 .pulse {
@@ -76,21 +69,4 @@ body {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  #slideText {
-    font-size: 1.1rem;
-  }
-
-  #buttonContainer button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  .container {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-  }
 }
