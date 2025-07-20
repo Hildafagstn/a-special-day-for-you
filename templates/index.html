@@ -2,46 +2,18 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ucapan Ulang Tahun</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0.6)
-        ),
-        url("static/background.jpeg") no-repeat center center fixed;
-      background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
-      color: #ffffff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .container {
-      padding: 20px;
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="static/style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>🎉 Selamat Ulang Tahun! 🎂</h1>
-    <p>Semoga harimu penuh dengan kebahagiaan dan cinta 🎈</p>
+    <img id="slideImage" class="pulse" src="static/amplop.gif" alt="Slide" />
+    <div id="slideText"></div>
+    <div id="buttonContainer"></div>
+    <audio id="bgMusic" src="static/music.mp3" preload="auto"></audio>
   </div>
+
+  <script src="static/script.js" defer></script>
 </body>
 </html>
