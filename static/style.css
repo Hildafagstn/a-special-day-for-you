@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-image: url('static/Background.jpeg'); /* FIXED PATH */
+  background-image: url('/a-special-day-for-you/static/background.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
