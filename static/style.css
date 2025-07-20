@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-image: url('static/background.jpeg'); /* FIXED PATH */
+  background-image: url('static/Background.jpeg'); /* FIXED PATH */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -13,22 +13,20 @@ body {
   overflow-y: auto;
 }
 
-/* Menengahkan konten + jarak atas */
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;  /* Tetap di atas, tapi kasih margin */
-  padding-top: 10vh;            /* Jarak dari atas layar */
-  padding-bottom: 10vh;         /* Biar tombol bisa diklik */
+  justify-content: flex-start;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   padding-left: 5vw;
   padding-right: 5vw;
   gap: 30px;
   box-sizing: border-box;
 }
 
-/* Gambar amplop */
 #slideImage {
   width: 90%;
   max-width: 350px;
@@ -37,7 +35,6 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-/* Teks ucapan */
 #slideText {
   font-size: 1.3rem;
   line-height: 1.6;
@@ -46,7 +43,6 @@ body {
   padding: 0 10px;
 }
 
-/* Tombol navigasi */
 #buttonContainer {
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +67,6 @@ body {
   background-color: #eeeeee;
 }
 
-/* Efek animasi amplop */
 .pulse {
   animation: pulse 1s infinite;
   cursor: pointer;
@@ -83,7 +78,7 @@ body {
   100% { transform: scale(1); }
 }
 
-/* Responsive untuk HP */
+/* Mobile */
 @media (max-width: 480px) {
   #slideText {
     font-size: 1.1rem;
@@ -95,7 +90,7 @@ body {
   }
 
   .container {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
   }
 }
